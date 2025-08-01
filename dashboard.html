@@ -18,42 +18,58 @@
         rel="stylesheet" />
 </head>
 
-<body>
-    <nav class="hero-image px-[5vw] py-[10px] flex justify-around items-center">
-        <h1 class="text-neutral-200 text-[18px] md:text-[30px] font-bold">
+<body class="relative">
+    <nav class="hero-image px-[5vw] py-[10px] flex justify-between items-center border-b-2 border-b-neutral-500">
+        <h1 class="text-neutral-200 text-[18px] md:text-[30px] hidden md:flex font-bold">
             BuyFy
         </h1>
 
         <ul class="flex gap-[60px] items-center">
-            <li>
-                <!-- <a href="" class="text-[22px] text-neutral-200"><i class="fa-solid fa-house hover:scale-110"></i></a> -->
+            <li class="flex items-center">
+                <a href=""><i class="fa-solid fa-house text-amber-500"></i></a>
 
-                <a href=""><img src="MEDIA/home.png" alt="" id="home" class="h-[50px] w-[50px] hover:scale-110"></a>
+                <a href=""><img src="MEDIA/home.jpg
+                " alt="" id="home" class="h-[50px] w-[50px] hidden md:block hover:scale-110"></a>
             </li>
             <li class="text-[22px] text-neutral-200 relative">
-                <!-- <i class="fa-solid fa-bag-shopping text-[22px] center"></i> -->
-                <a href=""><img src="MEDIA/cartt.png" alt="" id="cart" class="h-[50px] w-[80px] "></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><img src="MEDIA/cart.jpg" alt="" id="cart" class="h-[50px] w-[80px] hidden md:block"></a>
             </li>
             <li>
-                <!-- <a href="" class="text-[22px] text-neutral-200"><i
-                        class="fa-solid fa-gear hover:scale-110 hover:rotate-180"></i></a> -->
+                <a href=""><i class="fa-solid fa-gear block md:hidden"></i></a>
 
-                <a href=""><img src="MEDIA/settings.png" alt="" id="settings" class="h-[40px] w-[40px] hover:-rotate-180"></a>
+                <a href=""><img src="MEDIA/settings.jpg" alt="" id="settings"
+                        class="h-[40px] w-[40px] hidden md:flex hover:-rotate-180"></a>
             </li>
 
 
-            <li class="text-[18px] font-bold text-neutral-200">
-                <button class="border-none bg-none cursor-pointer">
-                    <h3 class="">More <i class="fa-solid fa-caret-down"></i></h3>
-                </button>
+            <li class="text-[18px] font-bold text-neutral-200 relative">
+                <button class="drop-down cursor-pointer " id="navDropDownButton">More <i
+                        class="fa-solid fa-angle-down"></i></button>
+
+                <div id="navDropDown" class="absolute top-[60px] h-[300px] w-[200px] bg-neutral-700 border-2 scale-0 z-10">
+
+                </div>
             </li>
         </ul>
+
+        <div>
+            <a href="" id="userIcon"><img src="MEDIA/user.jpg" alt=""
+                    class="h-[40px] w-[40px] rounded-[50%] border-2 border-neutral-300 hover:border-amber-500"></a>
+        </div>
 
     </nav>
 
     <main>
-        <section>
-            <h1 id="welcomeMessage" class="text-[20px] text-center center"></h1>
+        <section class="hero-image h-svh relative">
+            <!-- <h1 id="welcomeMessage" class="text-[20px] text-center center"></h1> -->
+
+            <div id="userContainer" class="rounded-[5px] w-fit absolute -top-52 right-0 flex flex-col items-center gap-[10px] bg-neutral-200 py-[10px] px-[20px] text-[16px]">
+                <p id="userName" class="flex items-center gap-[6px] "></p>
+                <a href="" class="hover:text-amber-500">Account</a>
+                <a href="" class="hover:text-amber-500">Settings</a>
+                <a href="" class="hover:text-amber-500"></a>
+            </div>
         </section>
     </main>
 

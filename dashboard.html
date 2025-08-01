@@ -16,61 +16,111 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
+        
+
 </head>
 
 <body class="relative">
-    <nav class="hero-image px-[5vw] py-[10px] flex justify-between items-center border-b-2 border-b-neutral-500">
+    <nav class="hero-image bg-amber-500 md:bg-transparent fixed md:sticky md:top-0 bottom-0 left-0 right-0 px-[5vw] py-[10px] flex justify-center md:justify-between items-center md:border-b-2 border-b-neutral-500 z-50">
         <h1 class="text-neutral-200 text-[18px] md:text-[30px] hidden md:flex font-bold">
             BuyFy
         </h1>
+        
+        <!-- MOBILE NAV -->
 
-        <ul class="flex gap-[60px] items-center">
-            <li class="flex items-center">
-                <a href=""><i class="fa-solid fa-house text-amber-500"></i></a>
+        <ul class="flex gap-[100px] md:hidden items-center text-[25px] text-white">
+            <li>
+                <a href="" class="flex md:hidden"><i class="fa-solid fa-house"></i></a>
 
-                <a href=""><img src="MEDIA/home.jpg
-                " alt="" id="home" class="h-[50px] w-[50px] hidden md:block hover:scale-110"></a>
-            </li>
-            <li class="text-[22px] text-neutral-200 relative">
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href=""><img src="MEDIA/cart.jpg" alt="" id="cart" class="h-[50px] w-[80px] hidden md:block"></a>
             </li>
             <li>
-                <a href=""><i class="fa-solid fa-gear block md:hidden"></i></a>
-
-                <a href=""><img src="MEDIA/settings.jpg" alt="" id="settings"
-                        class="h-[40px] w-[40px] hidden md:flex hover:-rotate-180"></a>
+                <a href="" class="flex md:hidden"><i class="fa-solid fa-cart-shopping"></i></a>
+       
             </li>
-
-
-            <li class="text-[18px] font-bold text-neutral-200 relative">
+            
+            <li>
+              <a href="" class="flex md:hidden"><i class="fa-solid fa-user"></i></a>
+  
+            </li>
+               
+        </ul>
+        
+        <!-- COMPUTER SCREEN NAV-->
+        
+        <ul class="items-center gap-[60px] hidden md:flex">
+          <li>
+            
+                <a href=""><img src="MEDIA/home.jpg
+                " alt="" id="home" class="h-[50px] w-[50px] hover:scale-110"></a>
+          </li>
+          
+          <li>
+            <a href=""><img src="MEDIA/cart.jpg" alt="" id="cart" class="h-[50px] w-[80px]"></a>
+          </li>
+          
+          <li>
+             <a href=""><img src="MEDIA/settings.jpg" alt="" id="settings"
+                        class="h-[40px] w-[40px] hover:-rotate-180"></a>
+          </li>
+          
+          <li class="text-[18px] font-bold text-neutral-200 relative">
                 <button class="drop-down cursor-pointer " id="navDropDownButton">More <i
                         class="fa-solid fa-angle-down"></i></button>
 
                 <div id="navDropDown" class="absolute top-[60px] h-[300px] w-[200px] bg-neutral-700 border-2 scale-0 z-10">
-
-                </div>
-            </li>
+                 
         </ul>
+        
+        
+        
 
         <div>
-            <a href="" id="userIcon"><img src="MEDIA/user.jpg" alt=""
-                    class="h-[40px] w-[40px] rounded-[50%] border-2 border-neutral-300 hover:border-amber-500"></a>
+                    <a href="" id="userIcon"><img src="MEDIA/user.jpg" alt=""
+                    class="h-[40px] w-[40px] rounded-[50%] border-2 border-neutral-300 hover:border-amber-500 hidden md:flex"></a>
         </div>
 
     </nav>
 
+<!-- CONTENT -->
+
     <main>
+      
+      <!-- HEADER -->
+      
+ <header class="bg-amber-500 flex md:hidden justify-between px-[5vw] py-[10px]">
+   
+   <button class="text-neutral-200 text-[20px]">
+   <i class="fa-solid fa-magnifying-glass"></i>
+   </button>
+   
+   <h1 class="text-white font-bold text-[18px]">BuyFy</h1>
+   
+   <button id="menuTrigger" class="text-neutral-200 text-[20px]">
+     <i class="fa-solid fa-bars-staggered"></i>
+   </button>
+   
+ </header>
+ 
+ <!-- HAMBURGER MENU-->
+ 
+ <div id="hamburgerMenu" class="bg-neutral-200 absolute top-0 transform translate-x-[-500px] p-4 w-[250px] flex flex-col">
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Customer service</p> <i class="fa-solid fa-angle-right"></i></a>
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Settings</p> <i class="fa-solid fa-angle-right"></i></a>
+ </div>
+      
+      
         <section class="hero-image h-svh relative">
             <!-- <h1 id="welcomeMessage" class="text-[20px] text-center center"></h1> -->
 
-            <div id="userContainer" class="rounded-[5px] w-fit absolute -top-52 right-0 flex flex-col items-center gap-[10px] bg-neutral-200 py-[10px] px-[20px] text-[16px]">
+            <div id="userContainer" class="rounded-[5px] w-fit absolute -top-52 right-0 flex flex-col items-center gap-[10px] bg-neutral-200 py-[10px] px-[20px] text-[16px] hidden md:flex">
                 <p id="userName" class="flex items-center gap-[6px] "></p>
                 <a href="" class="hover:text-amber-500">Account</a>
                 <a href="" class="hover:text-amber-500">Settings</a>
                 <a href="" class="hover:text-amber-500"></a>
             </div>
         </section>
+        
+       
     </main>
 
 

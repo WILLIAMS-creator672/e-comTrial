@@ -38,3 +38,21 @@ userIcon.addEventListener('click', (event) => {
     userContainer.classList.toggle('top-5')
     
 })
+
+//MOBILE HAMBURGER MENU TRIGGER
+
+let menuTriggerButton = document.getElementById("menuTrigger")
+let hamburgerMenu = document.getElementById("hamburgerMenu")
+
+let menuTriggerIcon = menuTriggerButton.querySelector('i')
+
+
+menuTriggerButton.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('translate-x-[-500px]')
+  
+  //menuTriggerIcon.classList.toggle('fa-solid fa-xmark')
+  
+  //menuTriggerIcon.classList.toggle('fa-solid fa-bars-staggered')
+  
+
+})

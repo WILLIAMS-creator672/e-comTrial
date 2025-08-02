@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     let userName = document.getElementById('userName')
+    let hamburgerUsername = document.getElementById('hamburgerUsername')
     let savedData = localStorage.getItem('formData')
 
     if (savedData) {
@@ -8,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // let capitalizeFirstLetter = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase()
 
         userName.innerHTML = `<i class="fa-regular fa-user text-amber-500"></i>${parsedData.firstName}`
+   hamburgerUsername.innerHTML = `<i class="fa-regular fa-user text-amber-500"></i>${parsedData.fullName}`
     }
 })
 
@@ -48,11 +50,29 @@ let menuTriggerIcon = menuTriggerButton.querySelector('i')
 
 
 menuTriggerButton.addEventListener('click', () => {
-  hamburgerMenu.classList.toggle('translate-x-[-500px]')
+  hamburgerMenu.classList.toggle('scale-0')
   
-  //menuTriggerIcon.classList.toggle('fa-solid fa-xmark')
+ // menuTriggerIcon.classList.toggle('fa-solid fa-xmark')
   
-  //menuTriggerIcon.classList.toggle('fa-solid fa-bars-staggered')
+ // menuTriggerIcon.classList.toggle('fa-solid fa-bars-staggered')
   
 
+})
+
+// SEARCH
+
+let searchButton = document.getElementById('searchButton')
+let searchContainer = document.getElementById('searchContainer')
+let searchInput = document.getElementById('searchInput')
+
+searchButton.addEventListener('click', () => {
+
+searchContainer.classList.remove('-translate-y-[50px]')
+setTimeout(() => {
+    searchInput.focus();
+  }, 100)
+})
+
+searchInput.addEventListener('blur', () => {
+  searchContainer.classList.add('-translate-y-[50px]')
 })

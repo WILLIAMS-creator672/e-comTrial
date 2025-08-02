@@ -97,3 +97,11 @@
         transform: skewY(0deg);
     }
 }
+
+.searchClear {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}

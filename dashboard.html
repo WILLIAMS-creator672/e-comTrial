@@ -85,28 +85,48 @@
 
     <main>
       
+      
+      
       <!-- HEADER -->
       
- <header class="bg-amber-500 flex md:hidden justify-between px-[5vw] py-[10px]">
+ <header class="bg-amber-500 flex md:hidden justify-between px-[5vw] py-[10px] sticky top-0">
    
-   <button class="text-neutral-200 text-[20px]">
+   <button id="searchButton" class="text-neutral-200 text-[20px]">
    <i class="fa-solid fa-magnifying-glass"></i>
    </button>
    
    <h1 class="text-white font-bold text-[18px]">BuyFy</h1>
    
-   <button id="menuTrigger" class="text-neutral-200 text-[20px]">
+   <button id="menuTrigger" class="text-neutral-200 text-[20px] border-none ">
      <i class="fa-solid fa-bars-staggered"></i>
    </button>
    
  </header>
  
+ <div id="searchContainer" class="fixed top-0 transform -translate-y-[50px] flex bg-white">
+
+  <input id="searchInput" type="text" placeholder="type to search" class="w-svw p-3 outline-none">
+ <i class="fa-solid fa-circle-xmark searchClear text-[20px] z-30"></i>
+ </div>
+ 
  <!-- HAMBURGER MENU-->
  
- <div id="hamburgerMenu" class="bg-neutral-200 absolute top-0 transform translate-x-[-500px] p-4 w-[250px] flex flex-col">
-   <a href="" class="flex justify-between items-center text-[18px]"><p>Customer service</p> <i class="fa-solid fa-angle-right"></i></a>
-   <a href="" class="flex justify-between items-center text-[18px]"><p>Settings</p> <i class="fa-solid fa-angle-right"></i></a>
+ <div id="hamburgerMenu" class="bg-neutral-200 p-4 absolute top-0 transform translate-x-[-500p] scale-0 w-[250px] fixed flex flex-col h-screen">
+   <div>
+   <h1 id="hamburgerUsername" class="font-bold flex items-center justify-center gap-[20px]"></h1>
+   </div> <br> <br>
+   
+   <div class="flex flex-col">
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Customer service</p> <i class="fa-solid fa-angle-right"></i></a> <br> <hr> <br>
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Settings</p> <i class="fa-solid fa-angle-right"></i></a> <br> <hr> <br>
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Settings</p> <i class="fa-solid fa-angle-right"></i></a> <br> <hr> <br>
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Settings</p> <i class="fa-solid fa-angle-right"></i></a> <br> <hr> <br>
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Settings</p> <i class="fa-solid fa-angle-right"></i></a> <br> <hr> <br>
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Settings</p> <i class="fa-solid fa-angle-right"></i></a> <br> <hr> <br>
+   <a href="" class="flex justify-between items-center text-[18px]"><p>Settings</p> <i class="fa-solid fa-angle-right"></i></a> <br> <hr> <br>
+</div>
  </div>
+ 
       
       
         <section class="hero-image h-svh relative">

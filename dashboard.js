@@ -49,6 +49,7 @@ let hamburgerMenu = document.getElementById("hamburgerMenu")
 let menuTriggerIcon = menuTriggerButton.querySelector('i')
 
 
+
 menuTriggerButton.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('scale-0')
   
@@ -64,6 +65,8 @@ menuTriggerButton.addEventListener('click', () => {
 let searchButton = document.getElementById('searchButton')
 let searchContainer = document.getElementById('searchContainer')
 let searchInput = document.getElementById('searchInput')
+let closeSearch = document.getElementById('closeSearch')
+let clearSearch = document.getElementById('clearSearch')
 
 searchButton.addEventListener('click', () => {
 
@@ -73,6 +76,11 @@ setTimeout(() => {
   }, 100)
 })
 
-searchInput.addEventListener('blur', () => {
+closeSearch.addEventListener('click', () => {
   searchContainer.classList.add('-translate-y-[50px]')
+})
+
+clearSearch.addEventListener('click', () => {
+  searchInput.value = ' '
+  searchInput.focus()
 })

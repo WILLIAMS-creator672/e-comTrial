@@ -100,7 +100,7 @@
 
 .searchClear {
     position: absolute;
-    right: 50px;
+    right: 80px;
     top: 50%;
     transform: translateY(-50%);
     color: #888;
